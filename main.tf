@@ -5,7 +5,7 @@ terraform {
       version = "3.26.0"
     }
     random = {
-      source  = "hashicorp/random"
+      source = "hashicorp/random"
       version = "3.0.1"
     }
   }
@@ -15,22 +15,20 @@ terraform {
     organization = "neeamradia"
 
     workspaces {
-      name = "RoboPhazis-main"
+      name = var.terraform_workspace
     }
   }
 }
 
 
 provider "aws" {
-  region = "us-west-2"
+  region = "us-east-1"
 }
-
-
 
 resource "random_pet" "sg" {}
 
 resource "aws_instance" "web" {
-  ami                    = "ami-830c94e3"
+  ami                    = "ami-0892d3c7ee96c0bf7"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.web-sg.id]
 
