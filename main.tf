@@ -15,7 +15,7 @@ terraform {
     organization = "neeamradia"
 
     workspaces {
-      name = 'RoboPhazis-main'
+      name = "RoboPhazis-main"
     }
   }
 }
