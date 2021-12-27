@@ -28,7 +28,7 @@ provider "aws" {
 resource "random_pet" "sg" {}
 
 resource "aws_instance" "web" {
-  ami                    = "ami-0892d3c7ee96c0bf7"
+  ami                    = "ami-04505e74c0741db8d"
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.web-sg.id]
 
