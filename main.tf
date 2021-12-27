@@ -1,3 +1,13 @@
+terraform {
+  cloud {
+    organization = "neeamradia"
+
+    workspaces {
+      name = "RoboPhazis-main"
+    }
+}
+}
+
 provider "aws" {
   region = "us-east-1"
 }
