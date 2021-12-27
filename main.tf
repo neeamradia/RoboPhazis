@@ -1,4 +1,4 @@
-terraform {
+/*terraform {
   required_providers {
     aws = {
       source = "hashicorp/aws"
@@ -6,6 +6,17 @@ terraform {
   }
 
   cloud {
+    organization = "neeamradia"
+
+    workspaces {
+      name = "RoboPhazis-main"
+    }
+  }
+}*/
+
+terraform {
+  backend "remote" {
+    hostname = "app.terraform.io"
     organization = "neeamradia"
 
     workspaces {
