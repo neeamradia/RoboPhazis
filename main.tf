@@ -1,3 +1,19 @@
+terraform {
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+    }
+  }
+
+  cloud {
+    organization = "neeamradia"
+
+    workspaces {
+      name = "RoboPhazis-main"
+    }
+  }
+}
+
 provider "aws" {
   region = "us-east-1"
 }
